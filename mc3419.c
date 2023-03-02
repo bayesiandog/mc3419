@@ -231,5 +231,3 @@ uint8_t mc3419_get_xyz(mc3419_xyz* data) {
     data->zG = (regVal[5] << 8) | regVal[4];
     return 0;
 }
-
-

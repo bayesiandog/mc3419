@@ -34,7 +34,7 @@ int main(void) {
 
     mc3419_xyz* data;
     mc3419_get_xyz(data);
-    
+
 
     return 0;
 }
