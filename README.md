@@ -37,6 +37,9 @@ typedef enum {
     odr_2000     // 2000Hz
 } mc3419_odr;
 ```
+```c
+uint8_t mc3419_set_odr(mc3419_odr odr);
+```
 
 #### Resolution
 ```c
@@ -47,6 +50,9 @@ enum {
     r16g,
     r12g
 } range;
+```
+```c
+uint8_t mc3419_set_range(mc3419_range_scale rs);
 ```
 
 #### LPF
@@ -65,6 +71,15 @@ enum {
     idr_div_16 = 5 // Fc = IDR/16
 } filter;
 ```
+```c
+mc3419_range_scale rangeScale = {
+    .range = r2g,
+    .lpf = 1,
+    .filter = idr_div_4
+};
+
+mc3419_set_range(rangeScale);
+```
 
 #### Interrupts
 ```c
@@ -79,4 +94,7 @@ typedef struct {
     bool tilt_35 = 0;
     mc3419_int_settings settings;
 } mc3419_int_source;
+```
+```c
+uint8_t mc3419_set_int(mc3419_int_source source);
 ```
