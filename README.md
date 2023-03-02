@@ -1,5 +1,5 @@
 # MC3419 Driver
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.digikey.com%2Fen%2Fproducts%2Fdetail%2Fmemsic-inc%2FMC3419%2F15292803&psig=AOvVaw0cREtBtGYBQZ-s1-m_K-BF&ust=1677869633671000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiB7M71vf0CFQAAAAAdAAAAABAg)
+![image](https://user-images.githubusercontent.com/50047346/222524640-d0a7eee4-c5e0-4388-aa93-3b09b20c28ab.png)
 
 ## Description
 
