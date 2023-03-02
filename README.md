@@ -38,7 +38,7 @@ typedef enum {
 } mc3419_odr;
 ```
 ```c
-uint8_t mc3419_set_odr(mc3419_odr odr);
+mc3419_set_odr(odr_200);
 ```
 
 #### Resolution
@@ -50,9 +50,6 @@ enum {
     r16g,
     r12g
 } range;
-```
-```c
-uint8_t mc3419_set_range(mc3419_range_scale rs);
 ```
 
 #### LPF
@@ -96,5 +93,10 @@ typedef struct {
 } mc3419_int_source;
 ```
 ```c
-uint8_t mc3419_set_int(mc3419_int_source source);
+mc3419_int_source intSource = {
+    .tilt_35 = 1, // Enable TILT 35 interrupt source
+    .settings.tilt_35_timer =  tilt35_2 // 2 second duration of valid tilt-35 angle detection 
+};
+
+mc3419_set_int(intSource);
 ```
