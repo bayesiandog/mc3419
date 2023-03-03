@@ -14,7 +14,7 @@ User can configure the chip's:
 
 ```ODR``` (Output Data Rate)
 
-```Resolution``` ( G Range)
+```Resolution``` (G Range)
 
 ```LPF``` (Low Pass Filter)
 
