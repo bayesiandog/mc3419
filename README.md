@@ -9,7 +9,7 @@ MC3419 accelerometer driver for microcontrollers using the I2C protocol.
 
 This driver supports the basic features of the accelerometer for quick prototyping and development.
 
-### Configurations supported
+## Configurations supported
 User can configure the chip's:
 
 ```ODR``` (Output Data Rate)
