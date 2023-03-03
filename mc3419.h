@@ -30,6 +30,7 @@
 #define MC3419_REG_INTR_STAT                (0X14)
 #define MC3419_REG_RANGE                    (0X20)
 
+// Register definitions for Threshold and Debounce registers
 #define MC3419_REG_TF_THRESH_LSB            (0X40)
 #define MC3419_REG_TF_THRESH_MSB            (0X41)
 #define MC3419_REG_TF_DB                    (0X42)
