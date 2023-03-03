@@ -5,7 +5,7 @@
 
 // Simple example to get the system up and running quickly
 // Sets the range and LPF
-// Enables the TILT_35 interrupt (no check performed (see uint8_t mc3419_check_int(mc3419_int_stat* stat);))
+// Enables the TILT_35 interrupt (no check for its status performed (see uint8_t mc3419_check_int(mc3419_int_stat* stat);))
 // Waits for new data to be available
 // Reads XYZ data
 int main(void) {
