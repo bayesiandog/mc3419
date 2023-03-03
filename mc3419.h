@@ -120,8 +120,8 @@ typedef struct {
  *
 */
 typedef enum {
-    tilt35_1_6 = 0,
-    tilt35_1_8,
+    tilt35_1_6 = 0, // 1.6sec
+    tilt35_1_8,     // 1.8sec
     tilt35_2,
     tilt35_2_2,
     tilt35_2_4,
