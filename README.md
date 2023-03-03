@@ -70,9 +70,9 @@ enum {
 ```
 ```c
 mc3419_range_scale rangeScale = {
-    .range = r2g,
-    .lpf = 1,
-    .filter = idr_div_4
+    .range = r2g,   // 2G
+    .lpf = 1,       // Enable Low Pass Filter
+    .filter = idr_div_4 // LPF Cutoff frequency = ODR/4
 };
 
 mc3419_set_range(rangeScale);
