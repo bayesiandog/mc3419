@@ -3,6 +3,11 @@
 #include "mc3419.h"
 
 
+// Simple example to get the system up and running quickly
+// Sets the range and LPF
+// Enables the TILT_35 interrupt (no check performed (see uint8_t mc3419_check_int(mc3419_int_stat* stat);))
+// Waits for new data to be available
+// Reads XYZ data
 int main(void) {
     
     // Check for every config function's return value
@@ -12,9 +17,9 @@ int main(void) {
     mc3419_set_odr(odr_200);
 
     mc3419_range_scale rangeScale = {
-        .range = r2g,
-        .lpf = 1,
-        .filter = idr_div_4
+        .range = r2g,   // 2G
+        .lpf = 1,       // Enable Low Pass Filter
+        .filter = idr_div_4 // LPF Cutoff frequency = ODR/4
     };
 
     
@@ -26,7 +31,7 @@ int main(void) {
     };
 
     mc3419_set_int(intSource);
-    mc3419_set_mode(wake);
+    mc3419_set_mode(wake); // Chip in WAKE state where data is available and clocks are running
 
     while (!mc3419_check_new_data()) {
         Delay(10);
