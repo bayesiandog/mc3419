@@ -110,7 +110,7 @@ uint8_t mc3419_set_int(mc3419_int_source source) {
         return 1;
     
     // AnyMotion feature must also be enabled for shake and tilt_35 features
-    if ((source.shake >> SHAKE_INT_EN) || (source.tilt_35 >> TILT_35_INT_EN))
+    if ((source.shake) || (source.tilt_35))
         regVal |=  source.anym >> ANYM_INT_EN;
 
     if (mc3419_reg_wr(MC3419_REG_MOTION_CTRL, regVal & 0x1D)) // Value ANDed with 0x1D to keep some default (and rarely used) settings intact (p.46 of datasheet)
