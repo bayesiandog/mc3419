@@ -182,12 +182,12 @@ uint8_t mc3419_set_int(mc3419_int_source source) {
  * @return uint8_t 0: No new data, 1: New data available, 2: Error
  */
 uint8_t mc3419_check_new_data(void) {
-    uint8_t* newData;
+    uint8_t newData;
 
 
     mc3419_reg_r(MC3419_REG_STATUS, &newData, 1);
     
-    return (*newData & 0x80);
+    return (newData & 0x80);
 }
 
 
