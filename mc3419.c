@@ -216,7 +216,7 @@ uint8_t mc3419_check_int(mc3419_int_stat* stat) {
  * @brief Retrieves current G values.
  * 
  * @param data Pointer to mc3419_xyz structure
- * @return uint8_t OK, 1: Error
+ * @return uint8_t 0: OK, 1: Error
  */
 uint8_t mc3419_get_xyz(mc3419_xyz* data) {
     uint8_t regVal[6];
