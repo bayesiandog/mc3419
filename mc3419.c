@@ -194,15 +194,15 @@ uint8_t mc3419_check_new_data(void) {
  * @return uint8_t 0: OK, 1: Error 
  */
 uint8_t mc3419_check_int(mc3419_int_stat* stat) {
-    uint8_t* regVal;
+    uint8_t regVal;
 
     mc3419_reg_r(MC3419_REG_STATUS, &regVal, 1);
 
-    stat->tilt_int = *regVal & MC3419_TILT_INT;
-    stat->flip_int = *regVal & MC3419_FLIP_INT;
-    stat->anym_int = *regVal & MC3419_ANYM_INT;
-    stat->shake_int = *regVal & MC3419_SHAKE_INT;
-    stat->tilt_35_int = *regVal & MC3419_TILT_35_INT;
+    stat->tilt_int = regVal & MC3419_TILT_INT;
+    stat->flip_int = regVal & MC3419_FLIP_INT;
+    stat->anym_int = regVal & MC3419_ANYM_INT;
+    stat->shake_int = regVal & MC3419_SHAKE_INT;
+    stat->tilt_35_int = regVal & MC3419_TILT_35_INT;
     return 0;
 }
 
