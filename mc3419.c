@@ -31,7 +31,7 @@ uint8_t mc3419_reg_wr(uint8_t reg, uint8_t val) {
  */
 uint8_t mc3419_reg_r(uint8_t reg, uint8_t* val, uint8_t nBytes) {
     // Platform specific I2C function (adjust accordingly).
-    if (!I2C_Read(MC3419_I2C_ADDRESS, reg, 0, nBytes, &val))
+    if (!I2C_Read(MC3419_I2C_ADDRESS, reg, 0, nBytes, val))
 	    return 1;
     
     return 0;
