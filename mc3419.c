@@ -100,7 +100,6 @@ uint8_t mc3419_set_range(mc3419_range_scale rs) {
 uint8_t mc3419_set_int(mc3419_int_source source) {
     uint8_t regVal = 0;
 
-
     regVal = source.tilt >> TILT_INT_EN | source.flip >> FLIP_INT_EN | source.anym >> ANYM_INT_EN 
             | source.shake >> SHAKE_INT_EN | source.tilt_35 >> TILT_35_INT_EN;
 
@@ -171,7 +170,6 @@ uint8_t mc3419_set_int(mc3419_int_source source) {
         if (mc3419_reg_wr(MC3419_REG_TIMER_CTRL, regVal & 0x07)) // no temporary latch support in this driver
             return 1;
     }
-    
     return 0;
 }
 
@@ -184,9 +182,7 @@ uint8_t mc3419_set_int(mc3419_int_source source) {
 uint8_t mc3419_check_new_data(void) {
     uint8_t newData;
 
-
     mc3419_reg_r(MC3419_REG_STATUS, &newData, 1);
-    
     return (newData & 0x80);
 }
 
@@ -199,7 +195,6 @@ uint8_t mc3419_check_new_data(void) {
  */
 uint8_t mc3419_check_int(mc3419_int_stat* stat) {
     uint8_t* regVal;
-
 
     mc3419_reg_r(MC3419_REG_STATUS, &regVal, 1);
 
@@ -220,7 +215,6 @@ uint8_t mc3419_check_int(mc3419_int_stat* stat) {
  */
 uint8_t mc3419_get_xyz(mc3419_xyz* data) {
     uint8_t regVal[6];
-
 
     mc3419_reg_r(MC3419_XOUT_EX_L, &regVal, 6); // Reads all 6 data registers (starting from 0x0D)
 
