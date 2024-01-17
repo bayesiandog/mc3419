@@ -78,7 +78,7 @@ uint8_t mc3419_set_odr(mc3419_odr odr) {
  * @return uint8_t 0: OK, 1: Error 
  */
 uint8_t mc3419_set_range(mc3419_range_scale rs) {
-    uint8_t regVal = 0;
+    uint8_t regVal;
 
     regVal = rs.range | rs.lpf << 3 | rs.filter << 4;
     
@@ -98,7 +98,7 @@ uint8_t mc3419_set_range(mc3419_range_scale rs) {
  * @return uint8_t 0: OK, 1: Error
  */
 uint8_t mc3419_set_int(mc3419_int_source source) {
-    uint8_t regVal = 0;
+    uint8_t regVal;
 
     regVal = source.tilt >> TILT_INT_EN | source.flip >> FLIP_INT_EN | source.anym >> ANYM_INT_EN 
             | source.shake >> SHAKE_INT_EN | source.tilt_35 >> TILT_35_INT_EN;
